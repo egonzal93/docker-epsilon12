@@ -1,0 +1,67 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:latest'
+  #redis:
+  #  image: 'redis:latest'
+  #  command: redis-server --requirepass foobared
+  redis:
+    #restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./redis
+    #container_name: redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    #expose:
+    #  - '6379'
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    depends_on:
+      - client
+      - apiv1
+    ports:
+      - '3050:80'
+  apiv1:
+    depends_on:
+      - postgres
+      - redis
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./server
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=960c3dac4fa81b4204779fd16ad7c954f95942876b9c4fb1a255667a9dbe389d
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+  worker:
+    depends_on:
+      - apiv1
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    volumes:
+      - /app/node_modules
+      - ./worker:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=960c3dac4fa81b4204779fd16ad7c954f95942876b9c4fb1a255667a9dbe389d

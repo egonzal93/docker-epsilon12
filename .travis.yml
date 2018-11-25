@@ -1,0 +1,25 @@
+sudo: required
+services:
+  - docker
+
+# Look into the client directory for the build context
+before_install:
+  - docker build -t diode/react-test -f ./client/Dockerfile.dev ./client
+
+# test script should exit with --coverage
+script:
+  - docker run diode/react-test npm test -- --coverage
+
+after_success:
+  - docker build -t diode/multi-client ./client
+  - docker build -t diode/multi-nginx ./nginx
+  - docker build -t diode/multi-server ./server
+  - docker build -t diode/multi-worker ./worker
+
+# Login to docker cli
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+# Push these images to docker hub
+  - docker push diode/multi-client
+  - docker push diode/multi-nginx
+  - docker push diode/multi-server
+  - docker push diode/multi-worker

@@ -1,0 +1,464 @@
+GET http://localhost:3050/values/all
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:3050/values/all
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T071954.200.html
+
+###
+
+POST http://localhost:3050/apiv1/values
+Content-Type: application/json
+
+{
+  "index":6
+}
+
+<> 2018-11-22T071941.200.json
+
+###
+
+POST http://localhost:3050/apiv1/values
+Content-Type: application/json
+
+{
+  "index":6
+}
+
+<> 2018-11-22T054436.200.json
+
+###
+
+GET http://localhost:3050/values/all
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T050535.200.html
+
+###
+
+POST http://localhost:3050/apiv1/values
+Content-Type: application/json
+
+{
+  "index":6
+}
+
+<> 2018-11-22T050507.200.json
+
+###
+
+GET http://localhost:3050/values/all
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T050342.200.html
+
+###
+
+POST http://localhost:3050/apiv1/values
+Content-Type: application/json
+
+{
+  "index":6
+}
+
+<> 2018-11-22T050330.200.json
+
+###
+
+POST http://localhost:5000/apiv1/values
+Content-Type: application/json
+
+{
+  "index":6
+}
+
+###
+
+GET http://localhost:5000/values/current
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T040926.200.json
+
+###
+
+POST http://localhost:5000/values
+Content-Type: application/json
+
+{
+    "index":6
+}
+
+<> 2018-11-22T040835.200.json
+
+###
+
+POST http://localhost:5000/values
+Content-Type: application/json
+
+{
+    "index":2
+}
+
+<> 2018-11-22T040754.200.json
+
+###
+
+POST http://localhost:5000/values
+Content-Type: application/json
+
+{
+    "index":2
+}
+
+<> 2018-11-22T040657.200.json
+
+###
+
+POST http://localhost:5000/values
+Content-Type: application/json
+
+{
+    "index":2
+}
+
+<> 2018-11-22T040031.200.json
+
+###
+
+POST http://localhost:5000/values
+Content-Type: application/json
+
+{
+    "index":2
+}
+
+<> 2018-11-22T035923.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035837.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+GET http://localhost:5000/values/current
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035809.200.json
+
+###
+
+GET http://localhost:5000/values/current
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035614.200.json
+
+###
+
+GET http://localhost:5000/values/all
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035609.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+GET http://localhost:5000/values/current
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/values/current
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035421.200.json
+
+###
+
+GET http://localhost:5000/values/all
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035349.200.json
+
+###
+
+GET http://localhost:5000/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T035312.200.html
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+GET http://localhost:5000
+
+<> 2018-11-22T035109.200.html
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+{:
+    "index": 2
+}:
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T033222.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T033111.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-22T033031.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+{data: {             index: this.state.index         }}
+
+<> 2018-11-22T124358.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+{data: {             index: this.state.index         }}
+
+<> 2018-11-22T124230.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+{data: {             index: this.state.index         }}
+
+<> 2018-11-22T124153.200.json
+
+###
+
+POST http://localhost:5000/values
+Accept: */*
+Cache-Control: no-cache
+
+{data: {             index: this.state.index         }}
+
+<> 2018-11-22T123153.200.json
+
+###
+

@@ -1,0 +1,22 @@
+FROM redis
+COPY redis.conf /usr/local/etc/redis/redis.conf
+#CMD ["sh", "-c", "redis-server /usr/local/etc/redis/redis.conf --requirepass ${REDIS_PASSWORD}"]
+#CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" , "--requirepass", "960c3dac4fa81b4204779fd16ad7c954f95942876b9c4fb1a255667a9dbe389d" ]
+CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+
+#ENV TERM=XTERM
+#RUN apt-get -y update
+#RUN apt-get install -y wget unzip cmake
+#RUN cd /tmp \
+#	&& wget https://github.com/RedisLabsModules/password/archive/master.zip \
+#	&& unzip master.zip -d /redis-password \
+#	&& cd /redis-password/password-master \
+#    && make
+#RUN apt-get purge -y wget unzip cmake \
+#	&& apt-get autoremove -y \
+#    && apt-get autoclean -y \
+#    && apt-get clean -y \
+#    && rm -rf /var/lib/apt/lists/*
+#USER redis
+#CMD ["redis-server", "--appendonly", "yes", "--requirepass",${REDIS_PASSWORD}, "--loadmodule", "/redis-password/password-master/password.so"]
+
