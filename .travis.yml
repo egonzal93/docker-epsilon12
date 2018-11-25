@@ -11,6 +11,7 @@ script:
   - docker run diode/react-test npm test -- --coverage
 
 after_success:
+# Build everything
   - docker build -t diode/multi-client ./client
   - docker build -t diode/multi-nginx ./nginx
   - docker build -t diode/multi-server ./server
