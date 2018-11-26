@@ -7,7 +7,9 @@ WORKDIR '/app'
 COPY ./package.json ./
 # install node_modules
 RUN npm install
-#Build the minified reseources and assets
+# copy over everything else
+COPY . .
+# Build the minified reseources and assets
 RUN npm run build
 
 #Phase 2: NGINX
