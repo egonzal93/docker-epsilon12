@@ -62,11 +62,14 @@ yarn-error.log*
 .idea
 ./client/node_modules
 ./client/.idea
+./client/package-lock.json
 
 ./server/node_modules
 ./server/.idea
+./server/package-lock.json
 
 ./worker/node_modules
 ./worker/.idea
+./worker/package-lock.json
 
 # git@github.com:egonzal93/docker-epsilon12.git
