@@ -34,7 +34,6 @@ console.log("8922:Connecting to redis");
 const redisClient = redis.createClient({
     host: keys.redisHost,
     port: keys.redisPort,
-    password: keys.redisPassword,
     retry_strategy: (options) => {
         console.log("8922:redis options", options);
         if (options.error && options.error.code === 'ECONNREFUSED') {
