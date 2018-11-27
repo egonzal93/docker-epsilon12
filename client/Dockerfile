@@ -16,7 +16,7 @@ RUN npm run build
 FROM nginx
 EXPOSE 3000
 #Copy builder phase into the nginx phase
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+#COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 #Served up production build assets
 COPY --from=builder /app/build /usr/share/nginx/html
