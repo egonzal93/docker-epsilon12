@@ -2,7 +2,7 @@
 FROM node:alpine as builder
 #Establish your docker PWD(Present Working Directory)
 WORKDIR '/app'
-#First we copy the package.json, as a technique to prevent docker build from
+#First we copy the Dockerrun.aws.json, as a technique to prevent docker build from
 #busting the cache eveytime source code has changed
 COPY ./package.json ./
 # install node_modules
