@@ -30,6 +30,9 @@ deploy:
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
+# The purpose of the S3 bucket (bucket_name) is essentially to get that Dockerrun.aws.json
+# file over to Elastic Beanstalk.  EB doesn't have the ability to receive a Dockerrun.aws.json file directly,
+# so we first push it over to S3, then EB gets 'poked' and told to go find the updated file in S3.
   bucket_name: elasticbeanstalk-us-east-2-837134779439
   bucket_path: docker_multi
   on:
